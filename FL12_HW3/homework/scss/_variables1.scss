@@ -1,0 +1,25 @@
+$fonts: (
+  hind: ('Hind', sans-serif),
+  source-sans-pro: ('Source Sans Pro', sans-serif),
+);
+
+$font-main: map-get($fonts, hind);
+$font-secondary: map-get($fonts, source-sans-pro);
+
+$color-background: #262626;
+$color-background-site: white;
+$color-underline: #14A0C7;
+
+$header-background-image: url(../img/m-h-day.jpg);
+$color-header: #2c2f3C;
+$color-button: #578b02;
+
+$color-card: #2c2f3c;
+$color-card-text: #9b9bab;
+
+$color-footer: #2c2f3c;
+$color-footer-text: #ADAFC2;
+
+$color-banner-text: #B3B293;
+$color-banner-heading: #2c2f3c;
+$banner-gradient: to right, #56870B, #2343CB;
