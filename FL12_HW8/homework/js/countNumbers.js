@@ -4,11 +4,13 @@ const makeNumber = str => str.split('').filter(el => isFinite(el) && el !== ' ')
 const countNumbers = str => {
     const numbers = makeNumber(str);
     const countNumbers = {};
-    for(let i = 0; i < numbers.length; i++) {
-        countNumbers[numbers[i]] = countNumbers[numbers[i]] ? countNumbers[numbers[i]] += 1 : 1;
+    const DEFAULT_VALUE = 1
+
+    for(let key of numbers) {
+        countNumbers[key] = countNumbers[key] ? countNumbers[key] += DEFAULT_VALUE : DEFAULT_VALUE;
     }
 
-    return countNumbers;
+    return countNumbers;    
 }
 
 countNumbers('erer384jj4444666888jfd123');
