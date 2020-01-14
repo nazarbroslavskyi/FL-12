@@ -84,3 +84,14 @@ const actors = [
   ];
   
 // getArrayOfKeys(actors, 'name');
+
+const limit = 30;
+
+function substitute(array) {
+    return mapArray(array, function(el) {
+        el = el < limit ? '*' : el;
+        return el;
+    });
+}
+
+// substitute([58, 14, 48, 2, 31, 29]); // [58, '*', 48, '*', 31, '*']
