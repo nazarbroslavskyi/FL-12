@@ -44,3 +44,43 @@ function filterArray(array, filterFunc) {
 }
 
 // filterArray([2, 5, 8], function(el) { return el % 2 === 0 }) 
+
+function flipOver(string) {
+    let reverseString = '';
+
+    for (let letter of string) {
+        reverseString = letter + reverseString;
+    }
+    return reverseString;
+}
+
+// flipOver('hey world') // 'dlrow yeh'
+
+function makeListFromRange(array) {
+    const rangeOfNumbers = [];
+
+    for(let i = array[0]; i <= array[1]; i++) {
+        rangeOfNumbers.push(i);
+    }
+    return rangeOfNumbers;
+}
+
+// makeListFromRange([2, 7]) // [2, 3, 4, 5, 6, 7]
+
+function getArrayOfKeys(objects, key) {
+    let arrayOfKeys = [];
+
+    executeforEach(objects, function(el) {
+        arrayOfKeys.push(el[key]);
+    });
+
+    console.log(arrayOfKeys);
+    return arrayOfKeys;
+}
+
+const actors = [
+    { name: 'tommy', age: 36 },
+    { name: 'lee', age: 28 }
+  ];
+  
+// getArrayOfKeys(actors, 'name');
