@@ -95,3 +95,10 @@ function substitute(array) {
 }
 
 // substitute([58, 14, 48, 2, 31, 29]); // [58, '*', 48, '*', 31, '*']
+
+function getPastDay(defaul, daysBefore) {
+    let dayMili = 86400000;
+    let defaultMili = defaul.valueOf();
+    let searchedDate = new Date(defaultMili - dayMili * daysBefore);
+    return searchedDate.getDate();
+  }
