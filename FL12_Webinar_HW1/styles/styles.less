@@ -1,0 +1,138 @@
+@import './variables.less'; 
+
+.header {
+
+	&.header_border-btm {
+		border-bottom: 1px solid #E9E9E9;
+	}
+
+	.navbar-brand {
+		position: relative;
+		bottom: 2px;
+	}
+
+	.navbar-nav {
+		
+		.nav-link {
+			color: #666;
+			font-weight: 500;
+
+			&:hover {
+				background-color: lighten(@active-link-bg-color, 40%);
+			}
+		}
+
+		.nav-link_active {
+			color: @active-link-color;
+			background-color: @active-link-bg-color;
+
+			&:hover {
+				background-color: @active-link-bg-color;
+				cursor: default;
+			}
+		}
+	}
+
+}
+
+.yoga-section {
+	color: black;
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+	margin-top: 80px;
+
+	.yoga-section__header {
+		font-weight: 500;
+		color: @header-color;
+		font-size: 38px;
+		color: @header-color;
+		border-bottom: 2px solid #4082C6;
+		margin-bottom: 20px;
+	}
+
+	.yoga-section__class-header {
+		color: @header-color;
+		font-weight: 600;
+	}
+}
+
+.related-classes {
+	margin-bottom: 80px;
+
+	.related-classes__header {
+		color: @header-color;
+		font-weight: 600;
+		border-bottom: 2px solid #2A74BF;
+	}
+
+	.related-classes__container {
+		font-size: 13px;
+	}
+
+		.related-classes__kickbox-class {
+			border: 1px solid @red-color;
+		}
+
+		.related-classes__fitness-class {
+			border: 1px solid @blue-color;
+		}
+
+		.related-classes__zumba-class {
+			border: 1px solid @orange-color;
+		}
+
+		.related-classes__bootcamp-class {
+			border: 1px solid @green-color;
+		}
+
+		.related-classes__kickboxing {
+			background-color: @red-color;
+		}
+
+		.related-classes__fitness {
+			background-color: @blue-color;
+		}
+
+		.related-classes__zumba {
+			background-color: @orange-color;
+		}
+
+		.related-classes__bootcamp {
+			background-color: @green-color;
+		}
+}
+
+.footer {
+	font-size: 13px;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    padding: 0;
+	}
+}
+
+@media (max-width: 767px) {
+  .navbar {
+		padding: 8px 0;
+		
+		.navbar-nav {
+			margin-top: 10px;
+		}
+	}
+
+	.related-classes {
+		.col:nth-child(n + 3) {
+			padding-top: 25px;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.yoga-section {
+
+		.yoga-section__content {
+			margin-top: 20px;
+		}
+	}
+}
