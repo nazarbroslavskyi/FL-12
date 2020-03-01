@@ -108,9 +108,7 @@ setTimeout(() => {
 
         Promise.all([fetch(`https://jsonplaceholder.typicode.com/posts?userId=${id}`), fetch(`https://jsonplaceholder.typicode.com/comments`)]).then(responses => {
             Promise.all(responses.map(r => r.json())).then(data => {
-                console.log(data[1]);
                 for(let post of data[0]) {
-                    console.log(post);
                     let newDiv = document.createElement('div');
                     newDiv.innerHTML = `
                         <div><b>Post</b> <span>${post.id}</span></div>
