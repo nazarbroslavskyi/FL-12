@@ -89,7 +89,7 @@ setTimeout(() => {
         let container = document.getElementsByClassName('list-wrapper')[0];
         if(document.getElementsByClassName('list-wrapper_list')[0]) {
             listOfUsers.remove();
-        } else if(!document.getElementsByClassName('list-wrapper_list')[0]){
+        } else if(!document.getElementsByClassName('list-wrapper_list')[0] && location.hash === ''){
             container.append(listOfUsers);
         } 
         if(document.getElementsByClassName('post-container')[0]) {
@@ -108,11 +108,12 @@ setTimeout(() => {
 
         Promise.all([fetch(`https://jsonplaceholder.typicode.com/posts?userId=${id}`), fetch(`https://jsonplaceholder.typicode.com/comments`)]).then(responses => {
             Promise.all(responses.map(r => r.json())).then(data => {
+                console.log(data[1]);
                 for(let post of data[0]) {
                     console.log(post);
                     let newDiv = document.createElement('div');
                     newDiv.innerHTML = `
-                        <div>Number of post <span>${post.id}</span></div>
+                        <div><b>Post</b> <span>${post.id}</span></div>
                         <div class="title"><b>${post.title}</b></div>
                         <div class="post-body">${post.body}</div>
                     `;
