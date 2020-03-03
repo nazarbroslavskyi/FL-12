@@ -42,7 +42,7 @@ $(".list").on('click', function(e){
       })
 
       $target.toggleClass('done');
-      todos[indexInTodos].done = true
+      todos[indexInTodos].done = !todos[indexInTodos].done;
       localStorage.setItem('todos', JSON.stringify(todos));
 
   } else if($target.hasClass('item-remove')) {
