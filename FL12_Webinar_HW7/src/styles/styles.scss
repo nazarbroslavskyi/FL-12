@@ -1,0 +1,95 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7;
+}
+
+.container {
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+
+    &__game-rules__rules {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__child {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__results {
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    &__results__child {
+        margin-left: 20px;
+        margin-right: 20px;
+        border-bottom: 5px solid #9be15d;
+        font-weight: bold;
+    }
+
+    &__buttons {
+        margin-top: 100px;
+        margin-bottom: 25px;
+    }
+
+    &__buttons__button {
+        width: 220px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        font-size: 16px;
+        text-align: center;
+        user-select: none;
+        transition: all ease 0.5s;
+        border: none;
+        background-color: #9be15d;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:active {
+            background-color: #9ae15dd0;
+        }
+    }
+
+    &__buttons__button--reset {
+        width: 300px;
+        background-color: #ff583393;
+
+        &:hover {
+            background-color: #fc4d26;
+        }
+
+        &:active {
+            background-color: #ff5833e5;
+        }
+    }
+
+    &__buttons__button--disabled {
+        background-color: #9ae15da4;
+    }
+}
+
+.lets-play {
+    font-weight: bold;
+}
+
+.round-results__text {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    &--show {
+        display: none;
+    }
+}
