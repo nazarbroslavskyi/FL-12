@@ -1,0 +1,43 @@
+<div class="item"
+  [class.invalid-data]="!userForm.valid">
+  <div class="item__inputs">
+    <form class="item__form-container"
+      [formGroup]="userForm"
+      *ngIf="isEditEnabled">
+      <input type="text"
+        class="item__input"
+        formControlName="name">
+      <input type="text"
+        class="item__input"
+        formControlName="email">
+      <input type="text"
+        class="item__input"
+        formControlName="phone">
+    </form>
+    <ng-template [ngIf]="!isEditEnabled">
+      <p class="item__user-info">{{userInfo.name}}</p>
+      <p class="item__user-info">{{userInfo.email}}</p>
+      <p class="item__user-info">{{userInfo.phone}}</p>
+    </ng-template>
+  </div>
+  <div class="item__buttons-container">
+    <button type="button"
+      class="item__button"
+      [disabled]="!userForm.valid"
+      [class.disabled]="!userForm.valid"
+      *ngIf="isEditEnabled"
+      (click)="onSaveInfo(userInfo.id)">Save</button>
+    <button type="button"
+      class="item__button"
+      *ngIf="isEditEnabled"
+      (click)="onDiscardChanges(userInfo.id)">Dicard</button>
+    <button type="button"
+      class="item__button"
+      *ngIf="!isEditEnabled"
+      (click)="onDelete(userInfo.id)">Delete</button>
+    <button type="button"
+      class="item__button"
+      *ngIf="!isEditEnabled"
+      (click)="onEditInfo(userInfo.id)">Edit</button>
+  </div>
+</div>

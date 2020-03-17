@@ -1,0 +1,20 @@
+<div class="list">
+  <div class="list__search-panel">
+    <div class="list__search-input">
+      <div class="search">
+        <input placeholder="Search"
+          type="text"
+          class="search__input"
+          name="search"
+          value=""
+          [(ngModel)]="searchTerm">
+      </div>
+    </div>
+    <button class="list__add-user-btn"
+      type="button"
+      (click)="onAddNewUser()">Add New User</button>
+  </div>
+  <ng-container *ngFor="let item of listOfUsers() | filterByInput:searchTerm ">
+    <app-list-item [userInfo]="item"></app-list-item>
+  </ng-container>
+</div>
