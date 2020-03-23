@@ -1,0 +1,26 @@
+<div class="list">
+  <div class="list__search-panel">
+    <div class="list__search-input">
+      <div class="search">
+        <input placeholder="Search"
+          type="text"
+          class="search__input"
+          name="search"
+          value=""
+          #searchInput
+          [(ngModel)]="searchTerm">
+      </div>
+    </div>
+    <a routerLink="new"> <button class="list__add-user-btn"
+        type="button"
+        >Add New User</button></a>
+  </div>
+  <div class="spinner"
+    *ngIf="!dataLoaded">
+    <div class="loader"></div>
+  </div>
+  <ng-container *ngFor="let item of userList">
+    <app-list-item (refreshUsers)="fetchUpdatedUsers()"
+      [userInfo]="item"></app-list-item>
+  </ng-container>
+</div>

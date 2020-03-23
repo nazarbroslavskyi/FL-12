@@ -1,0 +1,56 @@
+<div class="item">
+  <h1 class="item__header">{{editMode ? 'Edit User' : 'New User'}} </h1>
+  <button class="item__back-btn"
+    routerLink="/users">Back</button>
+  <div class="item__inputs">
+    <form class="item__form-container"
+      [formGroup]="userForm">
+      <div class="item__fields">
+        <h2>Name<span class="item__required">*</span></h2>
+      </div>
+      <input type="text"
+        [class.invalid-data]="userForm.get('name').invalid"
+        class="item__input"
+        formControlName="name">
+      <div class="item__fields">
+        <h2>Emailspan <span class="item__required">*</span></h2>
+      </div>
+      <input type="text"
+        [class.invalid-data]="userForm.get('email').invalid"
+        class="item__input"
+        formControlName="email">
+      <div class="item__fields">
+        <h2>Phone<span class="item__required">*</span></h2>
+      </div>
+      <input type="text"
+        [class.invalid-data]="userForm.get('phone').invalid"
+        class="item__input"
+        formControlName="phone">
+      <div class="item__fields"
+        *ngIf="!editMode">
+        <div>
+          <h2>Address</h2>
+        </div>
+        <input type="text"
+          class="item__input"
+          formControlName="address">
+        <div>
+          <h2>Website</h2>
+        </div>
+        <input type="text"
+          class="item__input"
+          formControlName="website">
+      </div>
+    </form>
+  </div>
+  <div class="item__buttons-container">
+    <button type="button"
+      class="item__button"
+      [disabled]="!userForm.valid"
+      [class.disabled]="!userForm.valid"
+      (click)="(editMode) ? onSaveInfo(user.id) : onCreateUser() ">Save</button>
+    <button type="button"
+      class="item__button"
+      routerLink="/users">Dicard</button>
+  </div>
+</div>

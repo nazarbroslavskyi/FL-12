@@ -1,0 +1,16 @@
+<div class="item"
+  [class.invalid-data]="!userForm.valid">
+  <div class="item__inputs">
+    <p class="item__user-info">{{userInfo.name}}</p>
+    <p class="item__user-info">{{userInfo.email}}</p>
+    <p class="item__user-info">{{userInfo.phone}}</p>
+  </div>
+  <div class="item__buttons-container">
+    <button type="button"
+      class="item__button"
+      (click)="onDelete(userInfo.id)">Delete</button>
+    <button type="button"
+      [routerLink]="[userInfo.id]"
+      class="item__button">Edit</button>
+  </div>
+</div>
