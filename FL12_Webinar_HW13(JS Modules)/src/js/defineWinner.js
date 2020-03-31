@@ -18,7 +18,7 @@ const defineWinner = (firstPlayer, secondPlayer, step) => {
       winner = 'Player 2';
     }
     board.removeEventListener('click', listener);
-    alert(`${winner}`);
+    alert(`${winner} won!`);
   } else if (
     squares[3].innerHTML === 'x' &&
     squares[4].innerHTML === 'x' &&
@@ -32,7 +32,7 @@ const defineWinner = (firstPlayer, secondPlayer, step) => {
       winner = 'Player 2';
     }
     board.removeEventListener('click', listener);
-    alert(`${winner}`);
+    alert(`${winner} won!`);
   } else if (
     squares[6].innerHTML === 'x' &&
     squares[7].innerHTML === 'x' &&
@@ -46,7 +46,7 @@ const defineWinner = (firstPlayer, secondPlayer, step) => {
       winner = 'Player 2';
     }
     board.removeEventListener('click', listener);
-    alert(`${winner}`);
+    alert(`${winner} won!`);
   } else if (
     squares[0].innerHTML === 'x' &&
     squares[3].innerHTML === 'x' &&
@@ -60,7 +60,7 @@ const defineWinner = (firstPlayer, secondPlayer, step) => {
       winner = 'Player 2';
     }
     board.removeEventListener('click', listener);
-    alert(`${winner}`);
+    alert(`${winner} won!`);
   } else if (
     squares[1].innerHTML === 'x' &&
     squares[4].innerHTML === 'x' &&
@@ -74,7 +74,7 @@ const defineWinner = (firstPlayer, secondPlayer, step) => {
       winner = 'Player 2';
     }
     board.removeEventListener('click', listener);
-    alert(`${winner}`);
+    alert(`${winner} won!`);
   } else if (
     squares[2].innerHTML === 'x' &&
     squares[5].innerHTML === 'x' &&
@@ -88,7 +88,7 @@ const defineWinner = (firstPlayer, secondPlayer, step) => {
       winner = 'Player 2';
     }
     board.removeEventListener('click', listener);
-    alert(`${winner}`);
+    alert(`${winner} won!`);
   } else if (
     squares[0].innerHTML === 'x' &&
     squares[4].innerHTML === 'x' &&
@@ -102,7 +102,7 @@ const defineWinner = (firstPlayer, secondPlayer, step) => {
       winner = 'Player 2';
     }
     board.removeEventListener('click', listener);
-    alert(`${winner}`);
+    alert(`${winner} won!`);
   } else if (
     squares[2].innerHTML === 'x' &&
     squares[4].innerHTML === 'x' &&
@@ -116,7 +116,7 @@ const defineWinner = (firstPlayer, secondPlayer, step) => {
       winner = 'Player 2';
     }
     board.removeEventListener('click', listener);
-    alert(`${winner}`);
+    alert(`${winner} won!`);
   } else if (
     squares[0].innerHTML === 'o' &&
     squares[1].innerHTML === 'o' &&
@@ -130,7 +130,7 @@ const defineWinner = (firstPlayer, secondPlayer, step) => {
       winner = 'Player 2';
     }
     board.removeEventListener('click', listener);
-    alert(`${winner}`);
+    alert(`${winner} won!`);
   } else if (
     squares[3].innerHTML === 'o' &&
     squares[4].innerHTML === 'o' &&
@@ -144,7 +144,7 @@ const defineWinner = (firstPlayer, secondPlayer, step) => {
       winner = 'Player 2';
     }
     board.removeEventListener('click', listener);
-    alert(`${winner}`);
+    alert(`${winner} won!`);
   } else if (
     squares[6].innerHTML === 'o' &&
     squares[7].innerHTML === 'o' &&
@@ -158,7 +158,7 @@ const defineWinner = (firstPlayer, secondPlayer, step) => {
       winner = 'Player 2';
     }
     board.removeEventListener('click', listener);
-    alert(`${winner}`);
+    alert(`${winner} won!`);
   } else if (
     squares[0].innerHTML === 'o' &&
     squares[3].innerHTML === 'o' &&
@@ -172,7 +172,7 @@ const defineWinner = (firstPlayer, secondPlayer, step) => {
       winner = 'Player 2';
     }
     board.removeEventListener('click', listener);
-    alert(`${winner}`);
+    alert(`${winner} won!`);
   } else if (
     squares[1].innerHTML === 'o' &&
     squares[4].innerHTML === 'o' &&
@@ -186,7 +186,7 @@ const defineWinner = (firstPlayer, secondPlayer, step) => {
       winner = 'Player 2';
     }
     board.removeEventListener('click', listener);
-    alert(`${winner}`);
+    alert(`${winner} won!`);
   } else if (
     squares[2].innerHTML === 'o' &&
     squares[5].innerHTML === 'o' &&
@@ -200,7 +200,7 @@ const defineWinner = (firstPlayer, secondPlayer, step) => {
       winner = 'Player 2';
     }
     board.removeEventListener('click', listener);
-    alert(`${winner}`);
+    alert(`${winner} won!`);
   } else if (
     squares[0].innerHTML === 'o' &&
     squares[4].innerHTML === 'o' &&
@@ -214,7 +214,7 @@ const defineWinner = (firstPlayer, secondPlayer, step) => {
       winner = 'Player 2';
     }
     board.removeEventListener('click', listener);
-    alert(`${winner}`);
+    alert(`${winner} won!`);
   } else if (
     squares[2].innerHTML === 'o' &&
     squares[4].innerHTML === 'o' &&
@@ -228,7 +228,7 @@ const defineWinner = (firstPlayer, secondPlayer, step) => {
       winner = 'Player 2';
     }
     board.removeEventListener('click', listener);
-    alert(`${winner}`);
+    alert(`${winner} won!`);
   } else if (step === 10) {
     playerOne.wins++;
     playerTwo.wins++;
