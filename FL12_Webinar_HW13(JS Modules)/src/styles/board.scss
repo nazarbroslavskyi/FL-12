@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.board {
+    &__first-row,
+    &__second-row,
+    &__third-row {
+        display: flex;
+    }
+
+    &__square {
+        background-color: orange;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        border: 1px solid black;
+        text-transform: uppercase;
+        font-size: 20px;
+        cursor: pointer;
+    }
+}
+
+.active {
+    border-bottom: 2px solid red;
+}
+
+.players {
+    display: flex;
+    justify-content: space-between;
+}
+
+.playersScore {
+    display: flex;
+    justify-content: space-between;
+}
+
+.options {
+    margin-right: 5px;
+}
