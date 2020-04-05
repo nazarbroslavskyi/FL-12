@@ -55,7 +55,7 @@ describe('CreditCardService', () => {
       expect(service.testCreditCard('5490 9977 7109 2064', 'DinersClub'));
   });
 
-  it('show error "Unknown card type"', async () => {
+  it('show error "Unknown card type"', () => {
     expect(service.testCreditCard('	3852 0000 0232 37', '')).toEqual({
       isValid: false,
       message: 'Unknown card type'
