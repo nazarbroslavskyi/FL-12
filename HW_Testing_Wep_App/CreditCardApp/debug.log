@@ -1,0 +1,6 @@
+[0405/142524.052:ERROR:file_io_win.cc(161)] CreateFile C:\Users\NAZAR\AppData\Local\Temp\karma-17817748\Crashpad\settings.dat: The system cannot find the path specified. (0x3)
+[0405/142524.053:ERROR:file_io_win.cc(170)] CreateFile C:\Users\NAZAR\AppData\Local\Temp\karma-17817748\Crashpad\reports\45ea6d39-b507-4ce8-9a43-af57a8c79e6d.dmp: The system cannot find the path specified. (0x3)
+[0405/142524.054:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0405/151529.013:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0405/151529.014:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0405/151529.014:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
